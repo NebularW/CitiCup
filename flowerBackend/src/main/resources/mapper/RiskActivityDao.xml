@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.RiskActivityDao">
+
+    <insert id="insertRiskActivity">
+        INSERT INTO risk_activity
+        VALUES (null, #{identity}, #{familyID}, #{timeStamp}, #{amount}, #{description}, false)
+    </insert>
+
+    <update id="updateDescription">
+        UPDATE risk_activity SET description_=#{description}
+        WHERE identity=#{identity}
+    </update>
+
+    <select id="selectByIdentity" resultType="com.flower.service.entity.RiskActivity">
+        SELECT * FROM risk_activity
+        WHERE identity=#{identity}
+    </select>
+
+    <select id="selectUncompletedByIdentity" resultType="com.flower.service.entity.RiskActivity">
+        SELECT * FROM risk_activity
+        WHERE identity=#{identity} AND completed=false
+    </select>
+
+    <select id="selectByFamilyID" resultType="com.flower.service.entity.RiskActivity">
+        SELECT * FROM risk_activity
+        WHERE family_id=#{familyID} AND completed=false
+    </select>
+
+    <update id="updateCompletedByIdentity">
+        UPDATE risk_activity SET completed=#{completed}
+        WHERE identity=#{identity} AND completed=false
+    </update>
+
+</mapper>

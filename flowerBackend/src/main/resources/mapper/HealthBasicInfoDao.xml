@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.HealthBasicInfoDao">
+    <insert id="insert" parameterType="com.flower.service.entity.HealthBasicInfo">
+        INSERT INTO health_basic_info
+        VALUES (#{identity}, #{name}, #{age}, #{sex}, #{IDCardNumber}, #{height}, #{weight})
+    </insert>
+
+    <select id="findAllByOpenID" resultType="com.flower.service.entity.HealthBasicInfo">
+        SELECT * FROM health_basic_info
+        WHERE identity=#{identity}
+    </select>
+
+    <update id="update" parameterType="com.flower.service.entity.HealthBasicInfo">
+        UPDATE health_basic_info
+        SET name=#{name}, age=#{age}, sex=#{sex}, id_card_number=#{IDCardNumber}, height=#{height}, weight=#{weight}
+        WHERE identity=#{identity}
+    </update>
+</mapper>

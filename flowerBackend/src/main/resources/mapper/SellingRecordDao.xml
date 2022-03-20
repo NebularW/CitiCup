@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.SellingRecordDao">
+    <insert id="insertSellActivity">
+        INSERT INTO selling_record
+        VALUES (null, #{identity}, #{timestamp}, #{amount}, #{isExempted})
+    </insert>
+
+    <select id="frequencyIn30Days" resultType="Integer">
+        SELECT COUNT(*)
+        FROM selling_record
+        WHERE identity=#{identity} AND is_exempted=false AND TIMESTAMPDIFF(DAY, timestamp_, #{timestamp}) &lt;= 30;
+    </select>
+
+    <select id="amountIn30Days" resultType="Double">
+        SELECT SUM(amount)
+        FROM selling_record
+        WHERE identity=#{identity} AND is_exempted=false AND TIMESTAMPDIFF(DAY, timestamp_, #{timestamp}) &lt;= 30;
+    </select>
+
+    <select id="lastAmount" resultType="Double">
+        SELECT amount
+        FROM selling_record
+        WHERE identity=#{identity}
+        ORDER BY timestamp_ DESC
+        LIMIT 1
+    </select>
+
+    <select id="amountIn90Days" resultType="Double">
+        SELECT SUM(amount)
+        FROM selling_record
+        WHERE identity=#{identity} AND (TIMESTAMPDIFF(DAY, timestamp_, CURDATE()) div 30) &lt;= 2
+        GROUP BY TIMESTAMPDIFF(DAY, timestamp_, CURDATE()) div 30
+        ORDER BY timestamp_ DESC
+    </select>
+
+</mapper>

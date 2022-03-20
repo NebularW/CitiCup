@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.ElderHelpRequestDao">
+    <select id="findAllByFromAndTo" resultType="Boolean">
+        SELECT is_authorized FROM elder_help_request
+        WHERE from_identity=#{fromIdentity} AND to_identity=#{toIdentity}
+    </select>
+
+    <insert id="addAuthorizationRequest">
+        INSERT INTO elder_help_request
+        VALUES (#{fromIdentity}, #{toIdentity}, false)
+    </insert>
+
+    <select id="findRequestsByToIdentity" resultType="com.flower.service.entity.ElderHelpRequest">
+        SELECT * FROM elder_help_request
+        WHERE to_identity=#{toIdentity} AND is_authorized=false
+    </select>
+
+    <update id="updateIsAuthorizedByFromAndTo">
+        UPDATE elder_help_request SET is_authorized=true
+        WHERE from_identity=#{fromIdentity} AND to_identity=#{toIdentity}
+    </update>
+</mapper>

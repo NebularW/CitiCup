@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.QuestionDao">
+
+    <insert id="insert">
+        INSERT INTO question
+        VALUES (#{id}, #{description}, #{searchTimes}, #{type})
+    </insert>
+
+    <select id="findByType" resultType="com.flower.service.entity.Question">
+        SELECT * FROM question
+        WHERE type_=#{type}
+    </select>
+
+    <update id="updateSearchTimesById">
+        UPDATE question SET search_times=#{searchTimes}
+        WHERE id=#{id}
+    </update>
+
+    <select id="findSearchTimesById" resultType="Integer">
+        SELECT search_times FROM question
+        WHERE id=#{id}
+    </select>
+
+    <select id="findTopN" resultType="com.flower.service.entity.Question">
+        SELECT * FROM question
+        ORDER BY search_times DESC
+        LIMIT #{N}
+    </select>
+
+</mapper>

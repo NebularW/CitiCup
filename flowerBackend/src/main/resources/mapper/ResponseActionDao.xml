@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.ResponseActionDao">
+
+    <insert id="insertResponseAction">
+        INSERT INTO response_action
+        VALUES (#{fromIdentity}, #{toIdentity}, #{actionType})
+    </insert>
+
+    <select id="selectByToIdentityAndFromIdentity" resultType="com.flower.service.entity.ResponseAction">
+        SELECT * FROM response_action
+        WHERE to_identity=#{toIdentity} AND from_identity=#{fromIdentity}
+    </select>
+
+    <select id="toIdentityNum" resultType="Integer">
+        SELECT COUNT(*) FROM response_action
+        WHERE to_identity=#{toIdentity}
+    </select>
+
+    <delete id="deleteByToIdentity">
+        DELETE FROM response_action
+        WHERE to_identity=#{toIdentity}
+    </delete>
+
+    <select id="isRefused" resultType="boolean">
+        SELECT COUNT(*) FROM response_action
+        WHERE to_identity=#{toIdentity} AND action_type=false
+    </select>
+
+</mapper>

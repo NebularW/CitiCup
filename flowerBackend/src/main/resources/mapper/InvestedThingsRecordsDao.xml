@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.InvestedThingsRecordsDao">
+    <select id="selectByIdentity" resultType="com.flower.service.entity.InvestedThingsRecord">
+        SELECT * FROM invested_things_record
+        WHERE identity=#{identity}
+    </select>
+
+    <insert id="insertInvestedThingsRecord">
+        INSERT INTO invested_things_record
+        VALUES (null, #{identity}, #{fundName}, #{category}, #{amount}, #{timeStamp}, #{isExempted}, #{status})
+    </insert>
+
+    <update id="updateIsExemptedByIdentityAndTimeStamp">
+        UPDATE invested_things_record SET is_exempted=#{isExempted}
+        WHERE identity=#{identity} AND timestamp_=#{timeStamp}
+    </update>
+
+    <select id="selectInvestmentById" resultType="InvestedThingsRecord">
+        SELECT * FROM invested_things_record
+        WHERE identity=#{identity}
+    </select>
+
+    <select id="findByTimestampIdentityAndCategory" resultType="com.flower.service.entity.InvestedThingsRecord">
+        SELECT * FROM invested_things_record
+        WHERE identity=#{identity} AND timestamp_=#{timeStamp} AND category=#{category}
+    </select>
+
+    <select id="findByTimestampAndIdentity" resultType="com.flower.service.entity.InvestedThingsRecord">
+        SELECT * FROM invested_things_record
+        WHERE identity=#{identity} AND timestamp_=#{timeStamp}
+    </select>
+
+    <select id="findByCategoryAndIdentity" resultType="com.flower.service.entity.InvestedThingsRecord">
+        SELECT * FROM invested_things_record
+        WHERE identity=#{identity} AND category=#{category}
+    </select>
+
+</mapper>

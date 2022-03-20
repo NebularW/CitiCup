@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.AuthorizationForMemberCardDao">
+
+    <select id="findAllByFromAndTo" resultType="com.flower.service.entity.AuthorizationForMemberCard">
+        SELECT * FROM authorization_for_member_card
+        WHERE from_identity=#{fromIdentity} AND to_identity=#{toIdentity}
+    </select>
+
+    <insert id="addAuthorizationRequest">
+        INSERT INTO authorization_for_member_card VALUES (#{fromIdentity}, #{toIdentity}, false)
+    </insert>
+
+    <select id="findRequestsByToIdentity" resultType="com.flower.service.entity.AuthorizationForMemberCard">
+        SELECT * FROM authorization_for_member_card
+        WHERE to_identity=#{toIdentity}
+    </select>
+
+    <update id="updateIsAuthorizedByFromAndTo">
+        UPDATE authorization_for_member_card SET is_authorized=#{isAuthorized}
+        WHERE from_identity=#{fromIdentity} AND to_identity=#{toIdentity}
+    </update>
+
+    <delete id="deleteAuthorizationRequest">
+        DELETE FROM authorization_for_member_card
+        WHERE from_identity=#{fromIdentity} AND to_identity=#{toIdentity}
+    </delete>
+
+</mapper>

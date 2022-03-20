@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.UserDao">
+
+    <insert id="addUser" parameterType="com.flower.Vo.LoginVo">
+        INSERT INTO user
+        (identity, user_name, sex, phone_number, avatar_url)
+        VALUES (#{identity}, #{userName}, #{gender}, #{phone}, #{avatarUrl})
+    </insert>
+
+    <update id="updatePhoneNumberByIdentity">
+        UPDATE user SET phone_number=#{phoneNumber}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateFamilyIDByIdentity">
+        UPDATE user SET family_id=#{familyID}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateRelationshipToFamilyHolderByIdentity">
+        UPDATE user SET relation_to_family_holder=#{relationshipToFamilyHolder}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateFontSizeByIdentity">
+        UPDATE user SET font_size=#{fontSize}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateAppStringByIdentity">
+        UPDATE user SET app_string=#{appString}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateRiskLevelByIdentity">
+        UPDATE user SET risk_level=#{riskLevel}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateAssetsByIdentity">
+        UPDATE user SET assets=#{assets}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateFrequencyByIdentity">
+        UPDATE user SET frequency=#{frequency}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateLimitByIdentity">
+        UPDATE user SET limit_=#{limit}
+        WHERE identity=#{identity}
+    </update>
+
+    <update id="updateModeByIdentity">
+        UPDATE user SET mode=#{mode}
+        WHERE identity=#{identity}
+    </update>
+
+    <select id="selectByIdentity" resultType="com.flower.service.entity.User">
+        SELECT * FROM user
+        WHERE identity=#{identity}
+    </select>
+
+    <select id="findIdentityByPhoneNumber" resultType="String">
+        SELECT identity FROM user
+        WHERE phone_number=#{phoneNumber}
+    </select>
+
+    <select id="selectByFamilyId" resultType="String">
+        SELECT identity FROM user
+        WHERE family_id=#{familyID}
+    </select>
+
+    <select id="selectByPhoneNumber" resultType="com.flower.service.entity.User">
+        SELECT * FROM user
+        WHERE phone_number=#{phoneNumber}
+    </select>
+
+    <select id="selectById_1" resultType="com.flower.Vo.UserVo1">
+        SELECT avatar_url, user_name, phone_number FROM user
+        WHERE identity=#{identity}
+    </select>
+
+    <select id="selectById_2" resultType="com.flower.Vo.UserVo2">
+        SELECT identity, avatar_url, user_name FROM user
+        WHERE identity=#{identity}
+    </select>
+
+    <select id="selectAllUser" resultType="com.flower.service.entity.User">
+        SELECT * FROM user
+    </select>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.HealthMedicalHistoryDao">
+    <insert id="insert" parameterType="com.flower.service.entity.HealthMedicalHistory">
+        INSERT INTO health_medical_history
+        VALUES (null, #{identity}, #{diseaseName}, #{hasPerformedOperation}, #{announcement}, #{confirmedTime})
+    </insert>
+
+    <select id="findByOpenID" resultType="com.flower.service.entity.HealthMedicalHistory">
+        SELECT * FROM health_medical_history
+        WHERE identity=#{identity}
+        ORDER BY confirmed_time DESC
+        LIMIT 3
+    </select>
+</mapper>

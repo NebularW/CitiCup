@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.FamilyTreeDao">
+    <insert id="insertFamilyTree">
+        INSERT INTO family_tree
+        VALUES (null, #{houseHolderIdentity}, #{familyName}, 0, 1, 0)
+    </insert>
+
+    <update id="updateMemberNumberByFamilyID">
+        UPDATE family_tree SET member_number=#{memberNumber}
+        WHERE id=#{id}
+    </update>
+
+    <update id="updateRedLevelNumberByFamilyID">
+        UPDATE family_tree SET red_level_number=#{redLevelNumber}
+        WHERE id=#{id}
+    </update>
+
+    <select id="getRedLevelNumberByFamilyID" resultType="Integer">
+        SELECT red_level_number FROM family_tree
+        WHERE id=#{id}
+    </select>
+
+    <select id="selectByFamilyID" resultType="com.flower.service.entity.FamilyTree">
+        SELECT * FROM family_tree
+        WHERE id=#{id}
+    </select>
+
+    <select id="selectByHouseHolderIdentity" resultType="com.flower.service.entity.FamilyTree">
+        SELECT * FROM family_tree
+        WHERE house_holder_identity=#{houseHolderIdentity}
+    </select>
+
+    <select id="findCreditByFamilyID" resultType="Integer">
+        SELECT credits FROM family_tree
+        WHERE id=#{familyID}
+    </select>
+
+    <update id="updateCreditByFamilyID">
+        UPDATE family_tree SET credits=#{credit}
+        WHERE id=#{familyID}
+    </update>
+
+    <select id="findFamilyNameByFamilyID" resultType="String">
+        SELECT family_name FROM family_tree
+        WHERE id=#{familyID}
+    </select>
+
+    <update id="updateFamilyNameByFamilyID">
+        UPDATE family_tree SET family_name=#{familyName}
+        WHERE id=#{familyID}
+    </update>
+
+    <select id="findMemberNumberByFamilyID" resultType="Integer">
+        SELECT member_number FROM family_tree
+        WHERE id=#{familyID}
+    </select>
+
+    <update id="updateFamilyMember" >
+        UPDATE family_tree SET member_number=#{memberNumber}
+        WHERE id=#{familyID}
+    </update>
+
+
+    <delete id="deleteFamilyTree">
+        DELETE from family_tree
+        WHERE house_holder_identity=#{houseHolderIdentity}
+    </delete>
+
+
+
+</mapper>

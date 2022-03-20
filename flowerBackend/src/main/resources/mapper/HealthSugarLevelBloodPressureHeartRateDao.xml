@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.HealthSugarLevelBloodPressureHeartRateDao">
+    <insert id="insert" parameterType="com.flower.service.entity.HealthSugarLevelBloodPressureHeartRate">
+        INSERT INTO health_sugar_level_blood_pressure_heart_rate
+        VALUES (null, #{identity}, #{type}, #{level}, #{timestamp})
+    </insert>
+
+    <select id="findByTypeAndOpenID" resultType="com.flower.service.entity.HealthSugarLevelBloodPressureHeartRate">
+        SELECT * FROM health_sugar_level_blood_pressure_heart_rate
+        WHERE identity=#{identity} AND type=#{type}
+        ORDER BY timestamp DESC
+        LIMIT 3
+    </select>
+</mapper>

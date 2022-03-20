@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.BankCardDao">
+
+    <insert id="insertBankCard">
+        INSERT INTO bank_card VALUES (#{ownerIdentity}, #{cardID}, #{ownerName}, #{phoneNumber})
+    </insert>
+
+    <select id="findBankCardByOwnerIdentity" resultType="com.flower.service.entity.BankCard">
+        SELECT * FROM bank_card
+        WHERE owner_identity=#{ownerIdentity}
+    </select>
+
+    <delete id="deleteByOwnerIdentityAndCardID">
+        DELETE FROM bank_card WHERE owner_identity=#{ownerIdentity} AND card_id=#{cardID}
+    </delete>
+</mapper>

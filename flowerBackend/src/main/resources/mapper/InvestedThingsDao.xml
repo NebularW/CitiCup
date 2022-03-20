@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.dao.InvestedThingsDao">
+
+    <insert id="insert">
+        INSERT INTO invested_things
+        VALUES (null, #{identity}, #{fundName}, #{category}, #{value}, #{timeStamp}, #{proportion})
+    </insert>
+
+    <select id="selectAllValidByIdentity" resultType="com.flower.service.entity.InvestedThings">
+        SELECT * FROM invested_things
+        WHERE identity=#{identity}
+    </select>
+
+    <delete id="deleteByIdentity">
+        DELETE FROM invested_things
+        WHERE identity=#{identity}
+    </delete>
+
+    <select id="findValuesByIdentity" resultType="com.flower.Vo.InvestedThingsVo">
+        SELECT category, value_ FROM invested_things
+        WHERE identity=#{identity}
+    </select>
+
+    <update id="updateValueByIdentityAndFundName">
+        UPDATE invested_things SET value_=#{value}
+        WHERE identity=#{identity} AND fund_name=#{fundName}
+    </update>
+
+    <select id="amountSum" resultType="Double">
+        SELECT SUM(value_) FROM invested_things
+        WHERE identity=#{identity}
+    </select>
+
+</mapper>
