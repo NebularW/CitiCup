@@ -1,0 +1,37 @@
+<!--pages/add_family_member/add_family_member.wxml-->
+<view wx:if="{{numOfFamily !== 0}}">
+	<view wx:for="{{ family }}" wx:for-index="idx" style="display: flex;flex-direction: row-reverse;margin-top: 50rpx;">
+		
+			<view style="margin-right: 150rpx;">
+			
+				<!-- <van-switch 
+					checked="{{ family[idx].checked }}" 
+					data-index="{{idx}}" bind:change="onChange" 
+				/> -->
+				<view wx:if="{{ family[idx].identity !== open_ID}}">
+					<van-button type="warning" custom-style="width:150rpx" bindtap="delMember" data-index="{{idx}}">删除</van-button>
+					<van-dialog id="van-dialog" />
+				</view>
+				<view wx:else>
+					<van-button disabled type="info" custom-style="width:150rpx">您自己</van-button>
+				</view>
+				
+				
+			</view>
+			<view style="margin-right: 150rpx;">
+				<view>
+					<image
+						style="width: 85rpx;height: 85rpx;border-radius: 50%;"
+						src="{{family[idx].avatarUrl}}"
+					/>
+				</view>
+					
+					<view>{{family[idx].userName}}</view>
+				
+			</view>
+
+	</view>
+</view>
+
+<view wx:else>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/sell_invest/sell_invest.wxml-->
+<view class='common-page-list'>
+    <view class='common-page-list-left'>
+      <text>您目前的总资产为{{myasset}}元</text>
+      <text>\n</text>
+      <text>\n</text>
+      <text>您卖出的金额为</text>
+    </view>
+</view>
+
+<view>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+</view>
+
+<view class="input-view">
+   <form bindsubmit="onSubmit">
+      <input  name="money" class="input1" type="number" placeholder="请输入金额(单位:元)"></input>
+      <button class="btn1" type="primary" form-type="submit">确认</button>
+   </form>
+</view>
+<van-dialog id="van-dialog"/>

@@ -1,0 +1,53 @@
+
+<view style="width:80%; margin : 0 auto;margin-top: 300rpx;">
+	<van-grid column-num="2"  border="{{false}}">
+		<van-grid-item use-slot="true">
+			<van-button
+			custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
+			square
+			type="info"
+			bindtap="navToBasicInfo"
+			>
+				<text style="font-size: 40rpx;">基础信息</text>
+			</van-button>
+		</van-grid-item>
+		
+		<van-grid-item use-slot="true">
+			<van-button
+			custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
+			square
+			type="primary"
+			bindtap="navToMedicineRecord"
+			>
+			<text style="font-size: 40rpx;">药物档案</text>
+
+			</van-button>
+		</van-grid-item>
+		
+		<van-grid-item use-slot="true">
+			<van-button
+			custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
+			square
+			type="primary"
+			color="#ffa900"
+			bindtap="navToDailyCondition"
+			>
+			<text style="font-size: 40rpx;">日常状况</text>
+			</van-button>
+		</van-grid-item>
+		
+		<van-grid-item use-slot="true">
+			<van-button
+			custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
+			square
+			type="warning"
+			bindtap="navToIllnessRecord"
+			>
+				<text style="font-size: 40rpx;">病史记录</text>
+
+			</van-button>
+		</van-grid-item>
+		
+	</van-grid>
+</view>
+

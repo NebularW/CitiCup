@@ -1,0 +1,43 @@
+<!--pages/my_history.wxml-->
+<view class="=dateR">
+
+	<van-cell title="选择查看日期：" value="{{ date }}" bind:click="onDisplay" is-link size="large" title-style="font-size : 30rpx" />
+	<van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose" bind:confirm="onConfirm" />
+
+	<van-cell-group inset>
+		<view style="height: 150rpx; margin-top: 20rpx;">
+			<view style="font-size: 30rpx;font-weight: bolder">今日总收益：</view>
+			<view style="text-align: center;font-size: 50rpx;margin-top: 30rpx;">
+				￥{{total_income}}
+			</view>
+		</view>
+		<!-- <van-divider /> -->
+
+
+		<view style="margin-top: 50rpx;">
+			<van-tabs active="{{ active }}" bind:change="onChange" border="{{true}}">
+				<van-tab title="收益记录" title-style="font-size: 32rpx;" border="{{true}}">
+					<view wx:for="{{fundsBenefit}}" wx:for-index="idx">
+						<van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" size="large"  title-style="font-size : 35rpx"/>
+					</view>
+				</van-tab>
+
+				<van-tab title="交易记录" title-style="font-size: 32rpx;" border="{{true}}">
+					<view wx:for="{{records}}" wx:for-index="idx">
+						<van-cell title="{{records[idx].fundName}}" label="{{records[idx].category}}" border="{{false}}" value="￥{{records[idx].amount}}" size="large" title-style="font-size : 35rpx" title-width="400rpx" />
+						<!-- <van-cell title="种类：" border="{{false}}" value="{{records[idx].category}}" /> -->
+						<van-cell title="{{records[idx].timeStamp}}" value="{{records[idx].status==0?'买入':'卖出'}}" size="large" />
+					</view>
+				</van-tab>
+			</van-tabs>
+		</view>
+
+		<!-- <view style="font-size: 45rpx;text-align: center;">收益记录</view>
+        <view wx:for="{{fundsBenefit}}" wx:for-index="idx">
+            <van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" />
+        </view>
+        <view style="font-size: 45rpx;text-align: center;">交易记录</view> -->
+
+	</van-cell-group>
+
+</view>

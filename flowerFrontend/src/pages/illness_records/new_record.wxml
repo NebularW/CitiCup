@@ -1,0 +1,89 @@
+<view style="width : 80%; margin : 0 auto; margin-top: 300rpx; ">
+	<van-cell-group>
+		<van-field
+			inset
+			label="年"
+			value="{{ year}}"
+			placeholder="请输入年份"
+			border="{{ true }}"
+			bind:change="onChange1"
+			shape="round"
+			center
+			custom-style="width : 90%; margin : 0 auto;"
+		/>
+
+		<van-field
+			inset
+			label="月"
+			value="{{ name }}"
+			placeholder="请输入月份"
+			border="{{ true }}"
+			bind:change="onChange2"
+			shape="round"
+			center
+			custom-style="width : 90%; margin : 0 auto;"
+		/>
+
+		<van-field
+			inset
+			label="日"
+			value="{{ day }}"
+			placeholder="请输入日期"
+			border="{{ true }}"
+			bind:change="onChange3"
+			shape="round"
+			center
+			custom-style="width : 90%; margin : 0 auto;"
+		/>
+
+		<van-field
+			inset
+			label="疾病名称"
+			value="{{ value }}"
+			placeholder="请输入疾病名称"
+			border="{{ true }}"
+			bind:change="onChange4"
+			shape="round"
+			center
+			custom-style="width : 90%; margin : 0 auto;"
+		/>
+
+		<van-field
+			inset
+			label="手术"
+			value="{{ value }}"
+			placeholder="请输入是否手术"
+			border="{{ true }}"
+			bind:change="onChange5"
+			shape="round"
+			center
+			custom-style="width : 90%; margin : 0 auto;"
+		/>
+
+		<van-field
+			inset
+			label="备注"
+			value="{{ value }}"
+			placeholder="请输入备注"
+			border="{{ true }}"
+			bind:change="onChange6"
+			shape="round"
+			center
+			custom-style="width : 90%; margin : 0 auto;"
+		/>
+
+
+		<van-button
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			bindtap="confirm"
+		>
+			确认上传
+		</van-button>
+	</van-cell-group>
+	<van-dialog id="van-dialog" />
+
+</view>

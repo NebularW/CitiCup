@@ -1,0 +1,13 @@
+<!--pages/phone_number/phone_number.wxml-->
+
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/手机号.png"></image>
+      </view>
+      <view class="text">手机号：{{pho}}</view><!--文字-->
+    </view>
+  </view>
+</view>

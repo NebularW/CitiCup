@@ -1,0 +1,197 @@
+/* pages/anticipate_result/anticipate_result.wxss */
+.nav{
+  background-color: #fff;
+}
+.top{
+width: 250rpx;
+height: 250rpx;
+margin: 0 auto;
+}
+.nickname{
+margin-bottom: 10rpx;
+text-align: center;
+}
+.item{
+height: 70rpx;
+background-color: #fff;
+margin: 20rpx;
+display: flex;
+border-radius: 20rpx;
+}
+.left{
+display: flex;
+justify-content: flex-start;
+flex-grow: 1;
+}
+.right{
+display: flex;
+justify-content: flex-end;
+flex-grow: 1;
+color: #ccc;
+margin-right: 20rpx;
+}
+page{/*页面背景—————统一浅灰*/
+  background-color: #ededed;
+}
+.userInformation {/*头像&微信名称*/
+  display: flex;
+  background-color: #ffffff;
+}
+.userInfomation-avatar {/*头像*/ 
+  background-color: #ffffff;
+  margin: 0 auto;  
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 200rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+  border-color: #ffffff;
+}
+
+.userInformation-nickname {/*昵称*/
+  color: #000000;
+  font-size: 22rpx;
+  font-weight: bold;
+  width: 320rpx;
+  height: 20rpx;
+  line-height: 120rpx;
+}
+.whitedivide {/*白色分割线*/
+  height: 10rpx;
+  background-color: #ffffff;
+  width: 80rpx;
+  position:relative;
+  top: 0rpx;
+}
+.graydivide {/*灰色分割条*/
+  height: 50rpx;
+  background-color: #ededed;
+  position:relative;
+  top: 0rpx;
+}
+.function {
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 0rpx;
+  overflow: hidden;
+  display: flex;/**/
+}
+.functioninformation {/*左边动作图标&文字说明*/
+  display: flex;
+}
+.left-icon {
+  display: flex;
+  margin: 20rpx;
+}
+.icon-picture {/*图标*/
+  display: flex;
+  width: 60rpx;
+  height: 60rpx;
+}
+.text {/*文字*/
+  font-size: 40rpx;
+  font-style: normal;
+  font-weight: normal;
+  width: 60rpx;
+  position: relative;
+  left: 0rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000000;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.right-icon {/*右边图片*/
+  display: flex;
+  margin: 14rpx;
+  position: absolute;
+  right: 14rpx;
+}
+.font{
+  font-weight: 900;        /*取值范围是100~900*/
+  font-size: 50rpx;
+  text-align: center;
+}
+.common-page-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 24rpx;
+  background: #fff;
+}
+.common-page-list-left {
+  font-size: 50rpx;
+  color: #333;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+}
+/* pages/input/input.wxss */
+.input1{
+  height: 35px;
+  border: 1rpx solid black; border-radius: 5px;
+  /*设置边框及圆角*/
+  margin-top: 10rpx;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  text-align: center
+}
+
+.input1-place{
+  /*placeholder样式类*/
+  color: palevioletred;
+  font-style: italic;
+}
+
+.btn1{
+  margin-top: 20rpx;
+  width: 50%;
+}
+
+.canvas {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 10%;
+}
+.canvas1_button{
+  position: absolute;
+  right:25.5%;
+  width: 22%;
+  height: 45rpx;
+  top: 6%;
+}
+.canvas1_text{
+  position: absolute;
+  right:0%;
+  width: 65%;
+  height: 90%;
+  bottom: 10%;
+  text-align: center;
+  font-size: 14rpx;
+}
+.canvas2_button{
+  position: absolute;
+  right:2.1%;
+  width: 22%;
+  height: 45rpx;
+  top: 6%;
+}
+.canvas2_text{
+  position: absolute;
+  right:0%;
+  width: 65%;
+  height: 90%;
+  bottom: 10%;
+  text-align: center;
+  font-size: 14rpx;
+}

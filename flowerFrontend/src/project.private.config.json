@@ -1,0 +1,62 @@
+{
+  "condition": {
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+<<<<<<< Updated upstream
+          "pathName": "pages/anticipate_result/anticipate_result",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        {
+          "name": "",
+          "pathName": "pages/recommendation/recommendation",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/add_invest/add_invest",
+=======
+          "pathName": "pages/sell_invest/sell_invest",
+>>>>>>> Stashed changes
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/anticipate_result/anticipate_result",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/info_improvement/info_improvement",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        }
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

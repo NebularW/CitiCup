@@ -1,0 +1,85 @@
+<!--pages/personal_card/personal_card.wxml-->
+
+<!-- <view class="member">
+    <view class="info-box">
+        <view class="info">
+            <view>
+                 <open-data type="userAvatarUrl"></open-data>
+            </view>
+          </view>
+    </view>
+</view>
+
+<text>\n\n</text>
+
+<view class="member">
+    <view class="info-box">
+        <view class="info">
+            <view>
+                <open-data type="userNickName"></open-data>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class="hr"></view>
+  <view class='item' bindtap="change_img">
+    <view class="title">头像</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>
+
+
+<view class="hr"></view>
+  <view class='item'>
+    <view class="title">手机绑定</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>
+
+<view class="hr"></view>
+  <view class='item'>
+    <view class="title">姓名</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>
+
+<view class="hr"></view>
+  <view class='item'>
+    <view class="title">我的二维码</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view> -->
+
+<!--用户头像和昵称-->
+<view class="userInformation">
+  <view class="userInfomation-avatar">
+    <open-data type="userAvatarUrl" ></open-data>
+  </view>
+  <view class="userInformation-nickname">
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation" bindtap="to_phone_number"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/手机号.png"></image>
+      </view>
+      <view class="text">手机号</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/箭头.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<!-- <view class="whitedivide"></view> -->

@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@vant/area-data": "^1.2.2",
+    "@vant/weapp": "^1.10.2"
+  },
+  "name": "src",
+  "description": "花旗杯微信小程序",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

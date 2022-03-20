@@ -1,0 +1,4 @@
+/* pages/community/community.wxss */
+page{
+	background-color: #f7f8fa;
+}

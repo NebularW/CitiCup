@@ -33,7 +33,7 @@ public class AuthorizationForMemberCardDaoTest {
 
     @Test
     public void addAuthorizationRequestTest(){
-        authorizationForMemberCardDao.addAuthorizationRequest("daoTest2","daoTest1");
+//        authorizationForMemberCardDao.addAuthorizationRequest("daoTest2","daoTest1");
     }
 
     @Test

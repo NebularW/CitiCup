@@ -1,0 +1,24 @@
+/* pages/senior-helper/senior-helper.wxss */
+.nav {
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 80rpx;
+    margin-left: 80rpx;
+    background-color: #bfbfbf; 
+
+    position: relative;
+    border: none;
+
+    text-align: center;
+}
+
+.text {
+    /* line-height: 0%; */
+    word-break: keep-all;
+    font-size: 60rpx;
+}

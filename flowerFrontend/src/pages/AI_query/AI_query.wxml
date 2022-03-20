@@ -1,0 +1,58 @@
+<!-- <view style="margin-top: 50rpx; width: 80%; margin : 0 auto">
+	<view class="question-container">
+    <van-grid clickable column-num="1">
+        <navigator class="question" url="/src/pages/AI_query/answers/1.html">1. 什么是家庭关联账户</navigator>
+        <van-grid-item text="2. 如何申请家庭关联账户">
+        </van-grid-item>
+    </van-grid>
+    <view class="question_text" wx:for="{{question_list}}" wx:for-item="question" wx:key="id" hover-class="question-hovered" bindtap="navigate_page" data-operation="{{question.id}}">
+        {{question.id}}.{{question.text}}
+    </view>
+</view>
+</view>
+
+ -->
+
+<view>
+	<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" bind:change="search">
+	</van-search>
+</view>
+
+<view wx:if="{{value == ''}}">
+	<van-tabs active="{{ active }}" bind:change="onChange" border="{{true}}">
+		<van-tab title="家庭关联账户">
+			<van-cell title="什么是家庭关联账户" is-link border="{{true}}" size="large"/>
+			<van-cell title="如何创建家庭关联账户" is-link border="{{true}}" size="large"/>
+			<van-cell title="什么是“长辈协助”功能" is-link border="{{true}}" size="large"/>
+			<van-cell title="如何开通“长辈协助”功能" is-link border="{{true}}" size="large"/>
+			<van-cell title="可用家庭积分明细在哪里查看" is-link border="{{true}}" size="large"/>
+
+		</van-tab>
+
+		<van-tab title="投资理财">
+			<van-cell title="什么是“风险管控”功能" is-link border="{{true}}" size="large"/>
+
+			<van-cell title="触发“风险熔断”之后如何实现风险解除" is-link border="{{true}}" size="large"/>
+
+			<van-cell title="如何明确是由哪笔交易导致的熔断触" is-link border="{{true}}" size="large"/>
+
+			<van-cell title="若有人点击“拒绝”，后续如何解冻个人账户" is-link border="{{true}}" size="large"/>
+
+			<van-cell title="在哪里可以查看平台上的历史记录" is-link border="{{true}}" size="large"/>
+
+		</van-tab>
+
+		<van-tab title="其他功能">
+			<van-cell title="如何不让家人看到本人账户收益情况" is-link border="{{true}}" size="large"/>
+			<van-cell title="“健康档案”有什么作用" is-link border="{{true}}" size="large"/>
+			<van-cell title="如何提高家庭共享积分录" is-link border="{{true}}" size="large"/>
+			<van-cell title="“一起看”功能有什么作用" is-link border="{{true}}" size="large"/>
+			<van-cell title="中年人和老年人的界面有什么不同" is-link border="{{true}}" size="large"/>
+		</van-tab>
+	</van-tabs>
+</view>
+
+<view wx:else>
+	<van-cell title="什么是家庭关联账户" is-link border="{{true}}" size="large" bindtap="navigate_page1"/>
+	<van-cell title="如何创建家庭关联账户" is-link border="{{true}}" size="large" bindtap="navigate_page2"/>
+</view>

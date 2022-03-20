@@ -1,0 +1,126 @@
+<view style="text-align: center;height: 30rpx;font-size: 32rpx;">
+	时间银行
+</view>
+<van-divider />
+<van-grid column-num="3"  border="{{false}}" >
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="info"
+		bindtap="updTo1"
+		>
+			服务存入
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="primary"
+		bindtap="updTo2"
+		>
+			护理寻找
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="warning"
+		bindtap="updTo3"
+		color="#ffa900"
+
+		>
+			储蓄余额
+		</van-button>
+	</van-grid-item>
+	
+</van-grid>
+
+<view wx:if="{{active == 1}}">
+	<view style="height : 200rpx;">
+		<van-cell title="服务存入"/>
+		<van-cell-group>
+			<van-cell title="打扫房间卫生" is-link custom-style="height:150rpx" label="时间报酬：2小时 发起人：Alice" value="报名">
+			</van-cell>
+				
+			<van-cell title="修剪花草" is-link custom-style="height:150rpx" label="时间报酬：1小时 发起人：Bob" value="报名">
+			</van-cell>
+		</van-cell-group>
+
+	</view>
+
+</view>
+
+<view wx:elif="{{active == 2}}">
+
+	<view style="height : 200rpx;">
+		<van-cell title="护理寻找"/>
+	</view>
+</view>
+
+<view wx:elif="{{active == 3}}">
+	<view style="height : 200rpx;">
+		<van-cell title="储蓄余额"/>
+	</view>
+
+
+</view>
+
+
+<view style="height: 400rpx;">
+	<!-- <van-cell-group>
+		<van-cell title="手语课堂" is-link custom-style="height:150rpx" label="明天" value="报名">
+		</van-cell>
+			
+		<van-cell title="爱心义卖" is-link custom-style="height:150rpx" label="3天后" value="报名">
+		</van-cell>
+	</van-cell-group> -->
+</view>
+
+<view class="nav">
+	<van-cell title="临时护理"/>
+</view>
+
+<van-cell-group>
+	<van-cell>
+		<van-button
+		custom-style="width:600rpx"
+		round
+		type="info"
+		block
+		bindtap="navTo1"
+		>
+			家政服务
+		</van-button>
+		
+	</van-cell>
+		
+	<van-cell>
+		<van-button
+		custom-style="width:600rpx"
+		round
+		type="info"
+		block
+		bindtap="navTo2"
+		>
+			上门送药
+		</van-button>
+	</van-cell>
+
+	<van-cell>
+		<van-button
+		custom-style="width:600rpx"
+		round
+		type="info"
+		block
+		>
+			老人接送
+		</van-button>
+	</van-cell>
+
+</van-cell-group>
+

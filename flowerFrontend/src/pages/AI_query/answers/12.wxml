@@ -1,0 +1,2 @@
+<!-- pages/AI_query/answers/12.wxml -->
+<text>当触发账户熔断时，账户资产未直接离开 平台，若家庭有人点击 reject，此次交易会暂停，后续若撤销此次操作，即可解冻。</text>

@@ -1,0 +1,35 @@
+/* pages/recommendation/recommendation.wxss */
+.common-page-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 24rpx;
+  background: #fff;
+}
+.common-page-list-left {
+  font-size: 50rpx;
+  color: #333;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+}
+.common-page-list-right {
+  font-size: 40rpx;
+  color: #333;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+}
+.add_btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn{
+  margin-top: 100rpx;
+  width: 400rpx;
+  background: #14a1fd;
+  color: #fff;
+}

@@ -1,0 +1,103 @@
+<view style="margin-top: 300rpx;">
+
+<van-cell-group>
+	<van-field
+		inset
+		label="姓名"
+		value="{{ name }}"
+		placeholder="请输入姓名"
+		border="{{ true }}"
+		bind:change="onChange1"
+		shape="round"
+		center
+		custom-style="width : 90%; margin : 0 auto;"
+	  />
+
+	<van-field
+		inset
+		label="年龄"
+		value="{{ age }}"
+		placeholder="请输入年龄"
+		border="{{ true }}"
+		bind:change="onChange2"
+		shape="round"
+		center
+		custom-style="width : 90%; margin : 0 auto;"
+	  />
+
+	<van-field
+		inset
+		label="性别"
+		value="{{ sex }}"
+		placeholder="请输入性别"
+		border="{{ true }}"
+		bind:change="onChange3"
+		round
+		center
+		custom-style="width : 90%; margin : 0 auto;"
+	  />
+
+	<van-field
+		inset
+		label="身份证号"
+		value="{{ IDCardNumber }}"
+		placeholder="请输入身份证号"
+		border="{{ true }}"
+		bind:change="onChange4"
+		round
+		center
+		custom-style="width : 90%; margin : 0 auto;"
+	  />
+	
+	<van-field
+		inset
+		label="身高"
+		value="{{ height }}"
+		placeholder="请输入身高(cm)"
+		border="{{ true }}"
+		bind:change="onChange5"
+		round
+		center
+		custom-style="width : 90%; margin : 0 auto;"
+	  />
+
+	<van-field
+		inset
+		label="体重"
+		value="{{ weight }}"
+		placeholder="请输入体重(kg)"
+		border="{{ true }}"
+		bind:change="onChange6"
+		round
+		center
+		custom-style="width : 90%; margin : 0 auto;"
+	  />
+	<view wx:if="{{hasRecords == false}}">
+		<van-button
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			bindtap="confirm1"
+		>
+			确认修改
+		</van-button>
+	</view>		
+	
+	<view wx:else>
+		<van-button
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			bindtap="confirm"
+		>
+			确认修改
+		</van-button>
+	</view>		
+
+</van-cell-group>
+</view>
+<van-dialog id="van-dialog" />

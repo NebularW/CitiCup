@@ -1,0 +1,38 @@
+<view style="margin-top: 375rpx;">
+	
+	<van-field
+		label="手机号"
+		value="{{ phoneNumber }}"
+		placeholder="请输入手机号"
+		border="{{ false }}"
+		bind:change="onChange"
+		shape="round"
+		center
+		custom-style="width : 80%; margin : 0 auto; border-radius : 15rpx"
+  	/>
+	<van-button
+		size="large"
+		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+		square
+		block
+		type="info"
+		bindtap="confirm"
+	>
+		确认
+	</van-button>
+
+</view>
+<van-dialog id="van-dialog" />
+
+<!-- <form>
+  
+  <view class="cu-form-group margin-top">
+    <view class="title d-flex">
+      手机号
+    </view>
+    <view class="w-100 h-100 borderBottom flex-1 d-flex jc-start ai-center" style="height:100rpx;">
+      <input maxlength="11" placeholder="请输入手机号" value="{{phone}}" data-name="phone" bindblur="setInput"></input>
+    </view>
+  </view>
+  <button class='btn1' bindtap="confirmPublish" form-type="submit">完成</button>
+</form> -->

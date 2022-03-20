@@ -1,0 +1,65 @@
+<!--pages/add_family_member/add_family_member.wxml-->
+<view wx:if="{{isInFamily}}">
+	<view wx:for="{{ family }}" wx:for-index="idx">
+		<view wx:if="{{family[idx].riskLevel == 2}}">
+			<view style="display: flex;flex-direction: row;height: 200rpx;background-color:#ff4800; border: 2rpx solid black;" >
+				<view style="margin-left: 150rpx;">
+						<image
+							style="width: 85rpx;height: 85rpx;border-radius: 50%;margin-top: 60rpx;"
+							src="{{family[idx].avatarUrl}}"
+						/>
+						<!-- <view>{{family[idx].userName}}</view> -->
+					
+				</view>
+				<view style="margin-top: 80rpx;margin-left: 30rpx;">{{family[idx].userName}}</view>
+			</view>
+		</view>
+
+		<view wx:elif="{{family[idx].riskLevel == 1}}">
+			<view style="display: flex;flex-direction: row;height: 200rpx;background-color:#ffd49d; border: 2rpx solid black;" >
+				<view style="margin-left: 150rpx;">
+						<image
+							style="width: 85rpx;height: 85rpx;border-radius: 50%;margin-top: 60rpx;"
+							src="{{family[idx].avatarUrl}}"
+						/>
+						<!-- <view>{{family[idx].userName}}</view> -->
+					
+				</view>
+				<view style="margin-top: 80rpx;margin-left: 30rpx;">{{family[idx].userName}}</view>
+			</view>
+		</view>
+		
+		<view wx:else="{{family[idx].riskLevel == 0}}">
+			<view style="display: flex;flex-direction: row;height: 200rpx;background-color:#a2e6a8; border: 2rpx solid black;" >
+				<view style="margin-left: 150rpx;">
+						<image
+							style="width: 85rpx;height: 85rpx;border-radius: 50%;margin-top: 60rpx;"
+							src="{{family[idx].avatarUrl}}"
+						/>
+						<!-- <view>{{family[idx].userName}}</view> -->
+					
+				</view>
+				<view style="margin-top: 80rpx;margin-left: 30rpx;">{{family[idx].userName}}</view>
+			</view>
+		</view> 
+			<!-- <view style="margin-right: 150rpx;">
+			
+				 <van-switch 
+					checked="{{ family[idx].checked }}" 
+					data-index="{{idx}}" bind:change="onChange" 
+				/>
+				<view wx:if="{{hasAuth[idx] == true}}">
+					<van-button type="info" custom-style="width:150rpx" bindtap="navToSeniorHelperUser">选择</van-button>
+				</view>
+				<view wx:else>
+					<van-button disabled type="info" custom-style="width:150rpx">无权限</van-button>
+				</view>
+				
+				
+			</view> -->
+			
+	</view>
+</view>
+
+<view wx:else>
+</view>

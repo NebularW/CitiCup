@@ -1,0 +1,40 @@
+/* pages/sell_invest/sell_invest.wxss */
+.common-page-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 24rpx;
+  background: #fff;
+}
+.common-page-list-left {
+  font-size: 50rpx;
+  color: #333;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+}
+/* pages/input/input.wxss */
+.input1{
+  height: 35px;
+  border: 1px solid black; border-radius: 5px;
+  /*设置边框及圆角*/
+  margin-top: 10px;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  text-align: center
+}
+
+.input1-place{
+  /*placeholder样式类*/
+  color: palevioletred;
+  font-style: italic;
+}
+
+.btn1{
+  margin-top: 20px;
+  width: 50%;
+}
+

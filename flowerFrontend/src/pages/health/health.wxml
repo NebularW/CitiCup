@@ -1,0 +1,85 @@
+<view style="width:80%; margin : 0 auto;margin-top: 200rpx;">
+	<van-grid column-num="2"  border="{{false}}">
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
+		square
+		type="info"
+		>
+			<text style="font-size: 40rpx;">预约挂号</text>
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
+		square
+		type="primary"
+		>
+		<text style="font-size: 40rpx;">在线问诊</text>
+
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
+		square
+		color="#ffa900"
+		>
+		<text style="font-size: 40rpx;">健康咨询</text>
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
+		square
+		type="warning"
+		bindtap="navTo3"
+
+		>
+			<text style="font-size: 40rpx;">体检检查</text>
+
+		</van-button>
+	</van-grid-item>
+	
+	</van-grid>
+
+
+
+
+	<view wx:if="{{hasHealthRecords}}">
+		<!-- <van-cell-group inset>
+			<van-cell title="单元格" value="内容" />
+			<van-cell title="单元格" value="内容" label="描述信息" />
+		</van-cell-group> -->
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;border-radius:15rpx"
+			block
+			type="info"
+			bindtap="navtoHealthRecords"
+			color="#26499d"
+		>
+			查看我的健康档案
+		</van-button>
+	</view>
+
+	<view wx:else>
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;border-radius:15rpx"
+			block
+			type="info"
+			bindtap="navToCreateHealthRecords"
+			color="#26499d"
+
+		>
+			新建健康档案
+		</van-button>
+	</view>
+
+	
+
+</view>

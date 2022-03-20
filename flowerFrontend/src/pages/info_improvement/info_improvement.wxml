@@ -1,0 +1,20 @@
+<!--pages/info_improvement/info_improvement.wxml-->
+<view id = 'body' wx:for="{{questionnaireArray}}" wx:key="id" wx:for-index='fatherIndex'>
+  <block wx:if="{{item.type === 'SAQ'}}">
+    <view class = 'SAQ' data-id='{{fatherIndex}}'>
+      <view class='SAQTitle'>
+        <view class='SAQQ'>Q</view>
+        <view class='SAQindex'>{{fatherIndex+1}}</view>
+        <view class='SAQquto'>:</view>
+        <text class='SAQDiscription' data-id='{{fatherIndex}}'>{{item.content.description}}</text>
+      </view>
+      <textarea auto-height='true' class = "SAQAnswer" value='{{item.content.answer}}' bindblur='bindblurAnswerOfSAQ' data-id='{{fatherIndex}}'></textarea>
+    </view>
+  </block>
+</view>
+
+<view class='add_btn'>
+    <button class='btn' bindtap="complete">
+        确认信息
+    </button>
+</view>

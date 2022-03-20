@@ -1,0 +1,8 @@
+<view class="canvas">
+    <canvas canvas-id="lineCanvas" disable-scroll="true"bindtouchstart="touchHandler"></canvas>
+	
+</view>
+<view class="canvas">
+    <canvas canvas-id="pieCanvas" bindtouchstart="touchHandler"></canvas>
+	
+</view>

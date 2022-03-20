@@ -1,0 +1,54 @@
+<!--pages/anticipate_result/anticipate_result.wxml-->
+<view>
+  <view class="font">您的生命周期投资轨道</view>
+  <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"  bindtouchstart="touchcanvas"></canvas>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <!--间隔灰横条-->
+  <view class="graydivide"></view>
+  <!--风险-->
+  <view class='function'>
+    <view style="width:100%">
+      <view class="functioninformation"><!--左边图片&文字-->
+        <view class="left-icon"><!--图片-->
+          <image class="icon-picture" src="../../images/风险.png"></image>
+        </view>
+        <view class="text">您的风险等级：{{riskdata}}</view><!--文字-->
+      </view>
+    </view>
+  </view>
+  <!--间隔白横线-->
+  <view class="whitedivide"></view>
+  <!--时间-->
+  <view class='function'>
+    <view style="width:100%">
+      <view class="functioninformation"><!--左边图片&文字-->
+        <view class="left-icon"><!--图片-->
+          <image class="icon-picture" src="../../images/时间周期.png"></image>
+        </view>
+        <view class="text">您的时间偏好：{{timedata}}</view><!--文字-->
+      </view>
+    </view>
+  </view>
+  <view>
+    <text>\n</text>
+    <view class="font">请输入您的预期投资金额</view>
+    <text>\n</text>
+    <view class="input-view">
+      <form bindsubmit="onSubmit">
+        <input  name="money" class="input1" type="number" placeholder="请输入金额(单位:元)"></input>
+        <button class="btn1" type="primary" form-type="submit">开始智能推荐</button>
+      </form>
+    </view>
+  </view>
+</view>

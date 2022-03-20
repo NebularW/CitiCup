@@ -1,0 +1,100 @@
+<!--pages/invest/invest.wxml-->
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/资产管理.png"></image>
+      </view>
+      <view class="text">我的资产：{{myasset}}元</view><!--文字-->
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/收益.png"></image>
+      </view>
+      <view class="text">昨日收益：{{yester}}元</view><!--文字-->
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/累计收入.png"></image>
+      </view>
+      <view class="text">累计收益：{{sumasset}}元</view><!--文字-->
+    </view>
+  </view>
+</view>
+
+<view>
+    <text>\n</text>
+    <view class='common-page-list-left'>
+      <view>我的投资组合</view>
+      <view class='common-page-list-right'>(点击基金名称可查看详情)</view>
+      <text>\n</text>
+      <view wx:if="{{fundA1=='1'}}">
+        <view bindtap="FA1">南方金利A</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundA2=='1'}}">
+        <view bindtap="FA2">泰信增强收益A</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundA3=='1'}}">
+        <view bindtap="FA3">华安日日鑫货币H</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundA4=='1'}}">
+        <view bindtap="FA4">海富通上证城投债ETF</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundA5=='1'}}">
+        <view bindtap="FA5">国泰上证5年期国债ETF</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundB1=='1'}}">
+        <view bindtap="FB1">富国中证煤炭A</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundB2=='1'}}">
+        <view bindtap="FB2">嘉实原油</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundB3=='1'}}">
+        <view bindtap="FB3">工银瑞信生态环境</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundB4=='1'}}">
+        <view bindtap="FB4">华安创业板50ETF</view>
+        <text>\n</text>
+      </view>
+      <view wx:if="{{fundB5=='1'}}">
+        <view bindtap="FB5">万家上证50ETF</view>
+        <text>\n</text>
+      </view>
+    </view>
+  <view class='add_btn'>
+    <button class='btn' bindtap="complete">
+        进行投资
+    </button>
+  </view>
+  <view class='add_btn'>
+    <button class='btn' bindtap="another">
+        卖出基金
+    </button>
+  </view>
+  <!-- <text>/n/n/n/n/n/n</text> -->
+</view>

@@ -1,0 +1,181 @@
+<!--pages/business_trainer/QA.wxml-->
+<van-steps steps="{{ steps }}" active="{{ active }}" />
+<view wx:if="{{active == 0}}">
+	<view style="height : 350rpx">
+		<view style="width : 80%; margin : 0 auto; margin-top: 100rpx;height: 150rpx;">
+			{{active + 1}}.
+			{{q[active].question}}
+		</view>
+
+		<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+			<van-radio-group value="{{ radio1 }}" bind:change="onChange1">
+				<van-radio name="1">正确</van-radio>
+				<van-radio name="2" style="margin: 30rpx;">错误</van-radio>
+			</van-radio-group>
+		</view>
+	</view>
+	
+
+	<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+
+		
+		<van-button
+			style="margin-left: 380rpx;"
+			square
+			type="info"
+			bindtap="next"
+		>
+			下一题
+		</van-button>
+	</view>
+</view>
+
+<view wx:elif="{{active == 1}}">
+	<view style="height : 350rpx">
+		<view style="width : 80%; margin : 0 auto; margin-top: 100rpx;height: 150rpx;">
+			{{active + 1}}.{{q[active].question}}
+		</view>
+		
+		<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+			<van-radio-group value="{{ radio2 }}" bind:change="onChange2">
+				<van-radio name="1">正确</van-radio>
+				<van-radio name="2" style="margin: 30rpx;">错误</van-radio>
+			</van-radio-group>
+		</view>
+	</view>
+	
+
+	<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+		
+		<van-button 
+		square
+		type="info"
+		bindtap="last"
+		>
+			上一题
+		</van-button>
+
+		<van-button
+			style="margin-left: 250rpx;"
+			square
+			type="info"
+			bindtap="next"
+		>
+			下一题
+		</van-button>
+	</view>
+	
+</view>
+
+<view wx:elif="{{active == 2}}">
+	<view style="height : 350rpx">
+		<view style="width : 80%; margin : 0 auto; margin-top: 100rpx;height: 150rpx;">
+			{{active + 1}}.{{q[active].question}}
+		</view>
+
+		<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+			<van-radio-group value="{{ radio3 }}" bind:change="onChange3">
+				<van-radio name="1">正确</van-radio>
+				<van-radio name="2" style="margin: 30rpx;">错误</van-radio>
+			</van-radio-group>
+		</view>
+	</view>
+	
+
+	<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+		<van-button 
+		square
+		type="info"
+		bindtap="last"
+		>
+			上一题
+		</van-button>
+
+		<van-button
+			style="margin-left: 250rpx;"
+			square
+			type="info"
+			bindtap="next"
+		>
+			下一题
+		</van-button>
+	</view>
+</view>
+
+<view wx:elif="{{active == 3}}">
+	<view style="height : 350rpx">
+		<view style="width : 80%; margin : 0 auto; margin-top: 100rpx;height: 150rpx;">
+			{{active + 1}}.{{q[active].question}}
+		</view>
+
+		<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+			<van-radio-group value="{{ radio4 }}" bind:change="onChange4">
+				<van-radio name="1">正确</van-radio>
+				<van-radio name="2" style="margin: 30rpx;">错误</van-radio>
+			</van-radio-group>
+		</view>
+	</view>
+	
+
+	<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+		<van-button 
+		square
+		type="info"
+		bindtap="last"
+		>
+			上一题
+		</van-button>
+
+		<van-button
+			style="margin-left: 250rpx;"
+			square
+			type="info"
+			bindtap="next"
+		>
+			下一题
+		</van-button>
+	</view>
+</view>
+
+<view wx:elif="{{active == 4}}">
+	<view style="height : 350rpx">
+		<view style="width : 80%; margin : 0 auto; margin-top: 100rpx;height: 150rpx;">
+			{{active + 1}}.{{q[active].question}}
+		</view>
+
+		<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+			<van-radio-group value="{{ radio5 }}" bind:change="onChange5">
+				<van-radio name="1">正确</van-radio>
+				<van-radio name="2" style="margin: 30rpx;">错误</van-radio>
+			</van-radio-group>
+		</view>
+	</view>
+	
+
+	<view style=" margin-left: 120rpx;margin-top: 100rpx;">
+		<van-button 
+		square
+		type="info"
+		bindtap="last"
+		>
+			上一题
+		</van-button>
+
+	</view>
+	
+	<view style="margin-top: 100rpx;">
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			bindtap="submit"
+		>
+			提交
+		</van-button>
+
+
+	</view>
+</view>
+<van-dialog id="van-dialog" />

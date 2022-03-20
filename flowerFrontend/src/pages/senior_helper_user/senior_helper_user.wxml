@@ -1,0 +1,58 @@
+<!--pages/senior_helper_user/senior_helper_user.wxml-->
+<view style="width: 80%; margin : 0 auto;margin-top: 250rpx;">
+	<van-grid column-num="3" border="{{false}}">
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				bindtap="navToHealth"
+				src="/images/字号调节.png"
+			/>
+			
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				bindtap="navToHealth"
+				src="/images/应用管理.png"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				bindtap="navToHealth"
+				src="/images/页面预览.png"
+			/>
+		</van-grid-item>
+
+		
+	</van-grid>
+	
+
+</view>
+
+<van-button 
+		size="large"
+		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx;margin-top : 100rpx"
+		square
+		block
+		type="info"
+		color="#26499d"
+	>
+			长辈支付守护开关
+	</van-button>
+
+	<van-button 
+		size="large"
+		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx;margin-top : 100rpx"
+		square
+		block
+		type="info"
+		color="#26499d"
+	>
+			亲情卡
+	</van-button>

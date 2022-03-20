@@ -1,0 +1,13 @@
+<view wx:for="{{records}}" wx:for-index="idx">
+	<view style="margin-top: 40rpx;margin-left: 40rpx;">
+		药物种类：{{records[idx].drugName}}
+	</view>
+	<view style="margin-top: 40rpx;margin-left: 40rpx;">
+		时间：{{records[idx].timestamp}}
+	</view>
+	<van-divider />
+</view>
+
+<view style="text-align: center;margin-top: 20rpx;margin-bottom: 20rpx;">
+	显示最近三条
+</view>

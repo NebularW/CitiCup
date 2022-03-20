@@ -1,0 +1,18 @@
+<view wx:for="{{records}}" wx:for-index="idx">
+	<view style="margin-top: 40rpx;margin-left: 40rpx;">
+		疾病名称：{{records[idx].diseaseName}}
+	</view>
+	<view style="margin-top: 40rpx;margin-left: 40rpx;">
+		是否动过手术：否
+	</view>
+	<view style="margin-top: 40rpx;margin-left: 40rpx;">
+		备注：{{records[idx].announcement}}
+	</view>
+	<view style="margin-top: 40rpx;margin-left: 40rpx;">
+		时间：{{records[idx].confirmedTime}}
+	</view>
+	<van-divider />
+</view>
+<view style="text-align: center;margin-top: 20rpx;margin-bottom: 20rpx;">
+	显示最近三条
+</view>

@@ -1,0 +1,9 @@
+.btn_text{
+	margin-top : 20rpx;
+	margin-bottom: 20rpx;
+	font-size: 80rpx;
+	font-weight: 500;
+	line-height: 80rpx;
+	text-align: center;
+	justify-content: center;
+}

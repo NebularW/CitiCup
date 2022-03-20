@@ -1,0 +1,5 @@
+/* pages/add_family_member/add_family_member.wxss */
+.switch
+{
+	margin-right: auto;
+}

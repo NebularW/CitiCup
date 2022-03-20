@@ -1,0 +1,41 @@
+<!--pages/add_family_member/add_family_member.wxml-->
+<view wx:if="{{numOfFamily !== 0}}">
+	<view wx:for="{{ family }}" wx:for-index="idx" style="display: flex;flex-direction: row-reverse;margin-top: 50rpx;">
+		
+			<view style="margin-right: 150rpx;">
+			
+				<!-- <van-switch 
+					checked="{{ family[idx].checked }}" 
+					data-index="{{idx}}" bind:change="onChange" 
+				/> -->
+				<view wx:if="{{hasAuth[idx] == true}}">
+					<van-button
+						type="info"
+						custom-style="width:150rpx"
+						bindtap="navToEarningsUser"
+						data-index="{{idx}}"
+						color="#02499d"
+					>
+						选择
+					</van-button>
+				</view>
+				<view wx:else>
+					<van-button disabled type="info" custom-style="width:150rpx">无权限</van-button>
+				</view>
+				
+				
+			</view>
+			<view style="margin-right: 150rpx;">
+					<image
+						style="width: 85rpx;height: 85rpx;border-radius: 50%;"
+						src="{{family[idx].avatarUrl}}"
+					/>
+					<view>{{family[idx].userName}}</view>
+				
+			</view>
+
+	</view>
+</view>
+
+<view wx:else>
+</view>

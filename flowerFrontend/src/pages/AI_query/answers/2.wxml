@@ -1,0 +1,8 @@
+<!-- pages/AI_query/answers/2.wxml -->
+
+
+<view style="border: 5rpx solid #26499d; width: 80%; border-radius: 30rpx ; margin : 0 auto; height: 750rpx; margin-top: 200rpx; padding-top: 100rpx;" >
+<view style="width: 80%; margin: 0 auto; font-size: 40rpx;">
+	可以通过添加家庭成员账户进入家庭树实现家庭关联账户的设置，具体操作为：点击家庭树—点击加号可添加新成员（通过搜索手机号或身份证证件号）—点击该页面下方“关系设置”按钮可设置本人与家庭成员的关系—点击“授权管理”按钮可以设置账户权限即是否可以查看本人的投资收益以及资产组合。
+</view>
+</view>

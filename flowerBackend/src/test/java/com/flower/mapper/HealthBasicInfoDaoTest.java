@@ -32,7 +32,7 @@ public class HealthBasicInfoDaoTest {
 
     @Test
     public void insertTest(){
-        healthBasicInfoDao.insert(healthBasicInfo);
+//        healthBasicInfoDao.insert(healthBasicInfo);
     }
 
     @Test

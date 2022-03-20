@@ -1,0 +1,35 @@
+<!--pages/phone/phone.wxml-->
+<!-- <view class="view-contain-ti">
+    <text class="text-ti">手机号</text>
+    <input bindinput="phoneInputAction" class="input1" placeholder="请输入手机号" auto-focus="true" type="digit"></input>
+</view> -->
+
+<form>
+  <view class="cu-form-group margin-top">
+    <view class="title d-flex">
+      <text space="ensp">性  别</text>
+    </view>
+    <picker class="w-100 h-100 borderBottom flex-1 d-flex jc-start ai-center" style="height:100rpx;font-size: 30rpx;color: #555;" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        {{array[sex]}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title d-flex">
+      手机号
+    </view>
+    <view class="w-100 h-100 borderBottom flex-1 d-flex jc-start ai-center" style="height:100rpx;">
+      <input maxlength="11" placeholder="请输入手机号" value="{{phone}}" data-name="phone" bindblur="setInput"></input>
+    </view>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title d-flex">
+      用户名
+    </view>
+    <view class="w-100 h-100 borderBottom flex-1 d-flex jc-start ai-center" style="height:100rpx;">
+      <input maxlength="11" placeholder="请输入用户名" value="{{name}}" data-name="name" bindblur="setInput2"></input>
+    </view>
+  </view>
+  <button class='btn1' bindtap="confirmPublish" form-type="submit">完成</button>
+</form>

@@ -1,0 +1,11 @@
+<!--pages/pattern_switch/pattern_switch.wxml-->
+<view class='add_btn'>
+    <button bindtap="pt1">
+        老年模式
+    </button>
+    <view class="row"></view>
+    <button bindtap="pt2">
+        中年模式
+    </button>
+	<van-dialog id="van-dialog" />
+</view>

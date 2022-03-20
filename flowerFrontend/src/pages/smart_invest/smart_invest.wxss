@@ -1,0 +1,32 @@
+/* pages/smart_invest/smart_invest.wxss */
+.font{
+  font-weight: 900;        /*取值范围是100~900*/
+  font-size: 70rpx;
+  text-align: center;
+}
+
+.add_btn{
+  width: 100%;
+  display:flex;
+  bottom: 0rpx;
+  position: fixed;
+}
+.btn{
+  margin-top: 30rpx;
+  width: 300rpx;
+  background: #14a1fd;
+  color: #fff;
+}
+
+
+.imagesize{
+  display:flex;
+  height: 800rpx;                   
+  justify-content: center;        
+  align-items:center;              
+  
+}
+.imagesize image { 
+   width:600rpx;
+   height:600rpx;
+}

@@ -1,0 +1,64 @@
+<van-tabs active="{{ active }}" bind:change="onChange" sticky border="{{true}}">
+	<van-tab title="金融小课堂">
+		<van-cell-group>
+			<van-cell title="稳经济 促创新 惠民生 政府工作报告共补充修改92处" is-link label="2022年03月12日"></van-cell>
+			
+			<van-cell title="银保监会发布配套实施细则 完善非寿险业务准备金监管制度" is-link label="2022年03月10日"></van-cell>
+
+			<van-cell title="2月份居民消费价格指数环比略升 物价运行平稳有基础" is-link label="2022年03月10日"></van-cell>
+
+			<van-cell title="外贸实现“开局稳”：今年前2个月进出口保持两位数增长" is-link label="2022年03月09日"></van-cell>
+
+			<van-cell title="3月份资金面展望：流动性将继续维持合理充裕格局" is-link label="2022年03月03日"></van-cell>
+
+			<van-cell title="“硬核”举措频出 金融助力外贸企业“乘风破浪”" is-link label="2022年03月01日"></van-cell>
+
+			<van-cell title="政策护航金融加力 保障性租赁住房发展迎新机遇" is-link label="2022年02月28日"></van-cell>
+
+			<van-cell title="发挥不同层次银行优势为保障性租赁住房提供多元化服务" is-link label="2022年02月28日"></van-cell>
+
+			<van-cell title="银行理财步入全面净值化新阶段" is-link label="2022年02月28日"></van-cell>
+
+			<van-cell title="专家解读“个人经营收款码”：优化支付服务 保障资金安全" is-link label="2022年02月24日"></van-cell>
+
+		</van-cell-group>
+
+		<view style="text-align: center;margin-top: 20rpx;margin-bottom: 20rpx;">
+			没有更多了...
+		</view>
+	</van-tab>
+
+	<van-tab title="知识问答">
+
+		
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx;margin-top : 500rpx"
+			square
+			block
+			type="info"
+			bindtap="navToQA"
+			color="#1597ef"
+		>
+			进入知识问答
+		</van-button>
+
+
+		
+	</van-tab>
+
+	<van-tab title="模拟投资训练">
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx;margin-top : 500rpx"
+			square
+			block
+			type="info"
+			bindtap="navToInvest"
+			color="#1597ef"
+		>
+			开始模拟投资训练
+		</van-button>
+	</van-tab>
+
+</van-tabs>

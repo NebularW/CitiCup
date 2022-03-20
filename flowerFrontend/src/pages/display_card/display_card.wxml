@@ -1,0 +1,41 @@
+<!--pages/display_card/display_card.wxml-->
+
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/姓名.png"></image>
+      </view>
+      <view class="text">持卡人姓名：{{bankname}}</view><!--文字-->
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/手机.png"></image>
+      </view>
+      <view class="text">预留手机号：{{bankphone}}</view><!--文字-->
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/银行卡.png"></image>
+      </view>
+      <view class="text">银行卡号：{{bankid}}</view><!--文字-->
+    </view>
+  </view>
+</view>

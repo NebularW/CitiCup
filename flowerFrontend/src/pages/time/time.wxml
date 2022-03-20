@@ -1,0 +1,25 @@
+<!--pages/time/time.wxml-->
+<view id = 'body' wx:for="{{questionnaireArray}}" wx:key="id" wx:for-index='fatherIndex'>
+  <block wx:if="{{item.type === 'SCQ'}}">
+    <view class = 'SCQ' data-id='{{fatherIndex}}'>
+      <view class='SCQTitle'>
+        <view class='SCQQ'>Q</view>
+        <view class='SCQindex'>{{fatherIndex+1}}</view>
+        <view class='SCQquto'>:</view>
+        <text class='SCQDiscription' data-id='{{fatherIndex}}'>{{item.content.description}}</text>
+      </view>
+      <radio-group class="SCQOption" bindchange="radioChangeSCQ">
+        <label class="SCQText" wx:for="{{item.content.options}}" wx:key="SCQID" data-id='{{fatherIndex}}' bindtouchstart='getTempFatherIndex'>
+          <radio value="{{item.name}}" checked="{{item.isSelected}}"/>{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+  </block>
+</view>
+
+<view class='add_btn'>
+    <button class='btn' bindtap="complete">
+        一键生成您的时间偏好分析
+    </button>
+</view>
+

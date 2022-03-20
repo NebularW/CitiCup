@@ -1,0 +1,27 @@
+<!--pages/care_model/care_model.wxml-->
+
+<view class='imagesize'>
+  <image src='/images/关怀.png' class='in-image'   >
+  </image>
+</view>
+
+<view class="row"></view>
+<view class="row"></view>
+<view class="row"></view>
+
+<view class='common-page-list'>
+    <view class='common-page-list-left'><text>开启关怀模式后，您可以享受到文字更大、按钮更大、色彩更强、语音读报等功能，是否确认开启。</text></view>
+</view>
+
+<view class="row"></view>
+<view class="row"></view>
+<view class="row"></view>
+<view class="row"></view>
+<view class="row"></view>
+<view class="row"></view>
+<view class="row"></view>
+<view class="row"></view>
+
+<view>
+    <button class='.btn1'><text class='common-page-list-right'>开始</text></button>
+</view>

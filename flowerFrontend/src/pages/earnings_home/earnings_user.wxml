@@ -1,0 +1,13 @@
+<van-cell title="选择查看日期：" value="{{ date }}" bind:click="onDisplay" is-link size="large" title-style="font-size : 30rpx" />
+<van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose" bind:confirm="onConfirm" />
+
+<view style="height: 150rpx; margin-top: 20rpx;">
+	<view style="font-size: 30rpx;font-weight: bolder;margin-left: 30rpx;">今日总收益：</view>
+	<view style="text-align: center;font-size: 50rpx;margin-top: 30rpx;">
+		￥{{total_income}}
+	</view>
+</view>
+
+<view wx:for="{{fundsBenefit}}" wx:for-index="idx">
+	<van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" size="large"  title-style="font-size : 35rpx"/>
+</view>

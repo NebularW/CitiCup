@@ -1,1 +1,1 @@
-flowerBackend为项目后端部分，请使用idea打开
+项目后端，请用idea打开

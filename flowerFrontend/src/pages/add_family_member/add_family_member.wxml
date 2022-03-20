@@ -1,0 +1,43 @@
+<!--pages/add_family_member/add_family_member.wxml-->
+<view wx:if="{{numOfFamily !== 0}}">
+	<!-- <view wx:for="{{family}}" wx:for-item="index">
+		{{family[index].name}}
+	</view> -->
+
+	<!-- <van-grid column-num="1" border = "{{ true }}" direction="horizontal" style="display: flex;flex-direction: row-reverse;">
+		<van-grid-item use-slot wx:for="{{ family }}" wx:for-index="idx">
+			
+			<van-switch 
+				checked="{{ family[idx].checked }}" 
+				data-index="{{idx}}" bind:change="onChange" 
+			/>
+			
+		</van-grid-item>
+
+	</van-grid> -->
+
+	<view wx:for="{{ family }}" wx:for-index="idx" style="display: flex;flex-direction: row-reverse;margin-top: 50rpx;">
+		
+			<view style="margin-right: 200rpx;">
+			
+				<van-switch 
+					checked="{{ family[idx].checked }}" 
+					data-index="{{idx}}" bind:change="onChange" 
+				/>
+				
+			</view>
+			<view style="margin-right: 150rpx;">
+					<image
+						style="width: 85rpx;height: 85rpx;border-radius: 50%;"
+						src="{{family[idx].avatarUrl}}"
+					/>
+					<view>{{family[idx].userName}}</view>
+				
+			</view>
+			
+
+	</view>
+</view>
+
+<view wx:else>
+</view>

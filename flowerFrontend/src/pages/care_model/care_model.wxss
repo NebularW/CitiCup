@@ -1,0 +1,38 @@
+/* pages/care_model/care_model.wxss */
+.imagesize{
+ display:flex;                    
+ justify-content: center;         
+}
+.imagesize image { 
+  width:300rpx;
+  height:300rpx;
+  }
+.common-page-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 24rpx;
+  background: #fff;
+}
+.common-page-list-left {
+  font-size: 40rpx;
+  color: #333;
+  font-weight: 500;
+  margin: auto;
+}
+.row{
+  width:100%;
+  height:20rpx;
+  background:#fcfcfc
+}
+.btn1 {
+  width: 40%;
+  background-color: rgb(96, 190, 245);
+  color: white;
+}
+.common-page-list-right {
+  font-size: 60rpx;
+  color: rgb(250, 248, 248);
+}

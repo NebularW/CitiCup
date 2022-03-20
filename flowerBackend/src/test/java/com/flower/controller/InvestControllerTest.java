@@ -30,7 +30,7 @@ import java.util.List;
 public class InvestControllerTest {
     @Autowired
     InvestController investController;
-    String identity = "o_P505VQk1enxptHjOTx3NMkHQZM";
+    String identity = "o_P505bhRowUXLeM9kR7E32sF_54";
     List<InvestedThings> investedThingsList=new ArrayList<>();
     InvestedThings investedThing1 = new InvestedThings();
     InvestedThings investedThing2 = new InvestedThings();
@@ -155,7 +155,7 @@ public class InvestControllerTest {
     public void addAmountTest1(){
         DealVo dealVo = new DealVo();
         dealVo.setIdentity(identity);
-        dealVo.setAmount(200.00);
+        dealVo.setAmount(20000.00);
         String res = investController.addAmount(dealVo);
         Assertions.assertEquals("Success!", res);
     }
@@ -184,9 +184,9 @@ public class InvestControllerTest {
     public void sellFundTest1(){
         DealVo dealVo = new DealVo();
         dealVo.setIdentity(identity);
-        dealVo.setAmount(10.00);
+        dealVo.setAmount(20000.00);
         String res = investController.sellFund(dealVo);
-//        Assertions.assertEquals("Success!", res);
+        Assertions.assertEquals("Red Risk", res);
     }
 
 //    测试卖出基金（两次额度相同）
@@ -226,8 +226,8 @@ public class InvestControllerTest {
     @Test
     public void descriptionRiskTest1(){
         DescriptionVo descriptionVo = new DescriptionVo();
-        descriptionVo.setIdentity("o_P505VQk1enxptHjOTx3NMkHQZM");
-        descriptionVo.setDescription("测试于3.15");
+        descriptionVo.setIdentity("o_P505bhRowUXLeM9kR7E32sF_54");
+        descriptionVo.setDescription("超过用户限额");
         String res = investController.describeRisk(descriptionVo);
         Assertions.assertEquals("Success!", res);
     }

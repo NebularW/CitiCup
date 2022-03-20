@@ -1,0 +1,28 @@
+<!--pages/me/me.wxml-->
+<view>
+    <van-cell title="个人名片" is-link link-type="navigateTo"
+  url="/pages/personal_card/personal_card"/>
+  <view class="line"></view>
+    <van-cell title="账号安全" is-link link-type="navigateTo"
+  url="/pages/account_security/account_security"/>
+  <view class="row"></view>
+    <van-cell title="模式切换" is-link link-type="navigateTo"
+  url="/pages/pattern_switch/pattern_switch"/>
+  <view class="line"></view>
+    <van-cell title="关怀模式" is-link link-type="navigateTo"
+  url="/pages/care_model/care_model"/>
+  <view class="row"></view>
+    <van-cell title="基础设置" is-link link-type="navigateTo"
+  url="/pages/basic_settings/basic_settings"/>
+</view>
+
+<view class='add_btn'>
+    <button class='btn' bindtap="switch_off">
+        切换账号
+    </button>
+    <view class="row"></view>
+    <button class='btn' bindtap="exit_out">
+        退出登录
+    </button>
+</view>
+

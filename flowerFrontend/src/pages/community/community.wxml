@@ -1,0 +1,61 @@
+<van-grid column-num="3"  border="{{false}}" >
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;font-size : 32rpx"
+		square
+		type="info"
+		>
+			24小时应急服务
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;font-size : 32rpx"
+		square
+		type="primary"
+		>
+			社区护照中心
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;font-size : 32rpx"
+		square
+		type="warning"
+		color="#ffa900"
+		>
+			社区康复中心
+		</van-button>
+	</van-grid-item>
+	
+</van-grid>
+
+<view style="margin-top: 30rpx;">
+	<van-cell title="社区活动" is-link value="查看更多"/>
+</view>
+
+<view style="height: 550rpx;">
+	<van-cell-group>
+	<van-cell title="手语课堂" is-link custom-style="height:150rpx" label="明天" value="报名">
+	</van-cell>
+		
+	<van-cell title="爱心义卖" is-link custom-style="height:150rpx" label="3天后" value="报名">
+	</van-cell>
+
+
+</van-cell-group></view>
+
+<view style="margin-top: -30rpx;">
+	<van-cell title="终身教育" is-link value="查看更多" border="{{true}}"/>
+</view>
+
+<van-cell-group>
+	<van-cell title="丝巾编织" is-link custom-style="height:150rpx" label="距您0.8km" value="报名">
+	</van-cell>
+		
+	<van-cell title="绿植养护" is-link custom-style="height:150rpx" label="距您1.9km" value="报名">
+	</van-cell>
+</van-cell-group>
+

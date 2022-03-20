@@ -1,0 +1,8 @@
+<van-cell title="选择查看日期：" value="{{ date }}" bind:click="onDisplay" is-link size="large" title-style="font-size : 30rpx" />
+<van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose" bind:confirm="onConfirm" />
+
+<view wx:for="{{records}}" wx:for-index="idx">
+<van-cell title="{{records[idx].fundName}}" label="{{records[idx].category}}" border="{{false}}" value="￥{{records[idx].amount}}" size="large" title-style="font-size : 35rpx" title-width="400rpx" />
+<!-- <van-cell title="种类：" border="{{false}}" value="{{records[idx].category}}" /> -->
+<van-cell title="{{records[idx].timeStamp}}" value="{{records[idx].status==0?'买入':'卖出'}}" size="large" />
+</view>

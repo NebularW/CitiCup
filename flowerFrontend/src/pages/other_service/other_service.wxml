@@ -1,0 +1,57 @@
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="info"
+	bindtap="navToHealth"
+	color="#1597ef"
+>
+	医疗健康
+</van-button>
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="primary"
+	bindtap="navToCommunity"
+>
+	社区广场
+</van-button>
+
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	block
+	type="warning"
+	bindtap="navToNurse"
+	color="#ffa900"
+>
+	护理服务
+</van-button>
+
+
+
+<view class="nav">
+	<van-cell title="最新资讯" is-link value="查看更多"/>
+</view>
+
+<van-cell-group>
+	<van-cell title="健康过新年,防疫紧相连" >
+		<image src="../../images/服务1.png" style="width: 300rpx;height: 200rpx;"></image>
+	</van-cell>
+		
+	<van-cell title="关于新冠病毒疫苗第三针接种通知" >
+		<image src="../../images/服务2.png" style="width: 300rpx;height: 200rpx;"></image>
+	</van-cell>
+
+	<van-cell title="专家爆料：预防高血压的几个小妙招" >
+		<image src="../../images/服务3.png" style="width: 300rpx;height: 200rpx;"></image>
+	</van-cell>
+</van-cell-group>
+
+<view style="height:150rpx;"></view>

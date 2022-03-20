@@ -30,7 +30,7 @@ public class UserDaoTest {
     @Test
     public void addUserTest(){
         RegisterVo registerVo = new RegisterVo("daoTest6","测试UserDao6","",1,"13775339999");
-        userDao.addUser(registerVo);
+//        userDao.addUser(registerVo);
     }
 
     @Test

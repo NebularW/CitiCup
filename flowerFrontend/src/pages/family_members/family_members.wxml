@@ -1,0 +1,55 @@
+<!--pages/family_members/family_members.wxml-->
+
+<!-- 用户 -->
+<view class="img">
+	<view class="imgItem">
+		<image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
+		<text class="text">用户A</text>
+	</view>
+	
+	<view class="imgItem">
+		<image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
+		<text class="text">用户B</text>
+	</view>
+
+	<view class="imgItem">
+	  <image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
+		<text class="text">用户C</text>
+	</view>
+
+
+	<!-- 待修改，加号的组件暂时没找好 -->
+	<view class="imgItem">
+	  <image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
+		<text class="text">...........</text>
+	</view>
+
+</view>
+
+
+<view>
+	<view>
+		<button class='btn' style="width:500rpx; height:80rpx" ><!-- 按钮设置为方形 -->
+		<text class='text'>家庭昵称修改</text><!-- 加空格实现换行 -->
+		</button>
+	</view>
+
+	<view>
+		<button bindtap="to_members_detail" class='btn' style="width:500rpx; height:80rpx" ><!-- 按钮设置为方形 -->
+		<text class='text'>关系设置</text><!-- 加空格实现换行 -->
+		</button>
+	</view>
+
+	<view>
+		<button bindtap="to_members_detail" class='btn' style="width:500rpx; height:80rpx" ><!-- 按钮设置为方形 -->
+		<text class='text'>授权管理</text><!-- 加空格实现换行 -->
+		</button>
+	</view>
+
+	<view>
+		<button class='btn' style="width:500rpx; height:80rpx" ><!-- 按钮设置为方形 -->
+		<text class='text'>退出关联</text><!-- 加空格实现换行 -->
+		</button>
+	</view>
+
+</view>

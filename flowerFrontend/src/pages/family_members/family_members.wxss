@@ -1,0 +1,64 @@
+/* pages/family_members/family_members.wxss */
+.img
+{
+	margin: 5rpx;
+	display: flex;
+	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.imgItem
+{
+	width: 50%;
+}
+
+.button1
+{
+	height: 30rpx;
+	width: 200%;
+	margin-top: -110rpx;
+	border-radius: 50%;
+	background-color: #ddc121;
+}
+
+.btn
+{
+	/* padding-left: 16px; */
+	margin-top: 40rpx;
+	border-radius: 12rpx;
+	background-color: #bfbfbf;
+
+	
+	position: relative;
+    border: none;
+
+
+    text-align: center;
+    -webkit-transition-duration: 0s; 
+    transition-duration: 0s;
+    text-decoration: none;
+
+
+}
+
+.btn:after {
+    content: "";
+    background: #ebe5e5;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.text
+{
+	word-break: keep-all;
+	font-size: 40rpx;
+	text-align: center;
+}
+

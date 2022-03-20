@@ -1,0 +1,144 @@
+<!--pages/tree/tree.wxml-->
+
+<view wx:if="{{isInFamily}}">
+	<van-grid column-num="3" border = "{{ true }}" square>
+	<van-grid-item use-slot wx:for="{{ numOfFamily }}" wx:for-item="index">
+		<image
+			style="width: 120rpx;height: 120rpx;border-radius: 50%;"
+			src="{{family[index].avatarUrl}}"
+		/>
+		<text style="font-size: 32rpx;">{{family[index].userName}}</text>
+	</van-grid-item>
+
+	<van-grid-item icon="add-o" bind:click="navToAddMember" text="添加成员">
+	</van-grid-item>
+	<!-- <van-popup 
+		round
+		show="{{ show }}"
+		closeable
+		close-icon-position="top-left"
+		custom-style="height: 20%;width : 80%"
+		bind:close="onClose"
+	>
+		<van-field
+			value="{{ value }}"
+			placeholder="请输入手机号"
+			border="{{ true }}"
+			custom-style="margin-top: 100rpx;width : 80%"
+		>
+			<van-button slot="button" size="small" type="info">
+			确认
+			</van-button>
+		</van-field>
+		
+	</van-popup> -->
+	
+	</van-grid>
+
+	<!-- <van-divider/> -->
+
+	<van-button 
+		size="large"
+		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+		square
+		block
+		type="info"
+		color="#26499d"
+	>
+		家庭昵称修改
+	</van-button>
+
+	<!-- <van-button 
+		size="large"
+		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+		square
+		block
+		type="info"
+	>
+		关系设置
+	</van-button> -->
+
+	<van-button 
+		size="large"
+		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+		square
+		block
+		type="info"
+		bindtap="navToAddFamilyMember"
+		color="#26499d"
+	>
+		授权管理
+	</van-button>
+
+	<view wx:if="{{isFamilyAdmin}}">
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			bindtap="navToDelMember"
+			color="#26499d"
+		>
+			移除成员
+		</van-button>
+
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="warning"
+			bindtap="delFamily"
+		>
+			删除家庭
+		</van-button>
+		<van-dialog id="van-dialog" />
+
+	</view>
+
+	<view wx:else>
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="warning"
+			bindtap="exitFamily"
+		>
+			退出关联
+		</van-button>
+		<van-dialog id="van-dialog" />
+	</view>
+</view>
+
+<view wx:else>
+	<view style="margin-top: 375rpx;">
+		
+	
+
+		<van-field
+			label="家庭名称"
+			value="{{ familyName }}"
+			placeholder="请输入家庭名称"
+			border="{{ false }}"
+			bind:change="onChange"
+			shape="round"
+			center
+			custom-style="width : 80%; margin : 0 auto; border-radius : 15rpx"
+		/>
+		<van-button
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			color="#02499d"
+			bindtap="createFamily"
+		>
+			创建家庭
+		</van-button>
+		<van-dialog id="van-dialog" />
+	</view>
+</view>
+

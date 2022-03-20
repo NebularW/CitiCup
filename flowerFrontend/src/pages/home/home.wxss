@@ -1,0 +1,34 @@
+.nav {
+    display: flex;
+}
+
+.search-container {
+    margin-top: 0rpx;
+    width: 90%;
+}
+
+.question-container {
+    width: 10%;
+    margin-top: 15rpx;
+}
+
+.tree-container{
+	height: 700rpx;
+}
+
+.navitem {
+    width: 20%;
+    /*每个元素占20%*/
+}
+.tree{
+	width : "80%";
+	height : "1200rpx";
+	
+}
+
+.text {
+    line-height: 0%;
+    /* margin-top: rpx; */
+    word-break: keep-all;
+    font-size: 30rpx;
+}

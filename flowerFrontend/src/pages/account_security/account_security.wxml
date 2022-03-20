@@ -1,0 +1,17 @@
+<!--pages/account_security/account_security.wxml-->
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation" bindtap="to_bank"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/银行.png"></image>
+      </view>
+      <view class="text">绑定银行卡</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/箭头.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

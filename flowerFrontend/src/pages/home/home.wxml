@@ -1,0 +1,178 @@
+<view class="nav">
+	<view class="search-container">
+		<van-search
+			value="{{ value }}"
+			placeholder="请输入搜索关键词"
+			shape="round"
+			right-icon="close"
+		>
+		</van-search>
+	</view>
+
+	<view class="question-container">
+		<van-icon 
+			bindtap="navToAI_Query"
+			name="smile-o" 
+			size="60rpx"
+			color="grey"
+		/>
+	</view>
+</view>
+
+<view class="tree-container">
+	<image 
+		style="width : 90%; height: 550rpx;margin-left: 50rpx; position: relative;"
+		src="https://s2.loli.net/2022/03/11/AMiXphHJrZbQwun.png"
+		bindtap="navToTree"
+	>
+	</image>
+	<image 
+		style="width : 90%; height: 350rpx;margin-left: 50rpx; margin-top: -170rpx;"
+		src="https://s2.loli.net/2022/03/11/Qdgn2VCbwWDMTsS.png"
+		bindtap="navToAI_Query"
+	>
+	</image>
+</view>
+
+
+<view wx:if="{{pattern}}" style="width:90%;margin: 0 auto; margin-top: 80rpx;">
+	
+	<van-grid
+		column-num="4"
+		square
+		border="{{true}}"
+	>
+		
+		<van-grid-item use-slot="true" >
+			
+			<van-image
+				width="160rpx"
+				height="160rpx"
+
+				fit="contain"
+				clickable="{{true}}"
+				src="/images/长辈协助.png"
+				bindtap="navToSeniorHelper"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				bindtap="navToEarnings"
+				src="/images/实时收益.png"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="165rpx"
+				height="165rpx"
+				bindtap="navToHistory"
+				src="/images/历史记录.png"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="165rpx"
+				height="165rpx"
+				bindtap="navToRisk"
+				src="/images/风险管控.png"
+			/>
+		</van-grid-item>
+
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				bindtap="navToInvite"
+				src="/images/声临其境.png"
+			/>
+			
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				bindtap="navToHealth"
+				src="/images/健康档案.png"
+			/>
+		</van-grid-item>
+
+		
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="170rpx"
+				height="170rpx"
+				src="/images/服务预约.png"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				src="/images/金融训练.png"
+				bindtap="navToBusinessTrainer"
+			/>
+		</van-grid-item>
+		
+	</van-grid>
+	
+</view>
+
+<view wx:else style="width:90%;margin: 0 auto; margin-top: 80rpx;">
+	<van-grid
+		column-num="3"
+		square
+		border="{{true}}"
+	>
+		
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				bindtap="navToHealth"
+				src="/images/健康档案.png"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				src="/images/金融训练.png"
+				bindtap="navToBusinessTrainer"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-image
+				width="165rpx"
+				height="165rpx"
+				bindtap="navToRisk"
+				src="/images/风险管控.png"
+			/>
+		</van-grid-item>
+	</van-grid>
+
+</view>
+
+<van-dialog 
+	use-slot
+	id="van-dialog" 
+	show="{{ show }}"
+	show-cancel-button
+	confirmButtonText="接受"
+>
+	<view style="height: 80rpx;text-align: center;padding-top: 50rpx;">
+		老涵邀请您体验声临其境功能
+	</view>
+	
+</van-dialog>
+<view style="height:150rpx;"></view>

@@ -1,0 +1,27 @@
+<!--pages/add_invest/add_invest.wxml-->
+<view style="margin-top: 300rpx;">
+	<view class='common-page-list'>
+    <view class='common-page-list-left'>
+		<text>您目前的总资产为{{myasset}}元</text>
+		<text>\n</text>
+		<text>\n</text>
+		<text>您的追加投资金额为</text>
+		</view>
+	</view>
+
+	<view>
+	<text>\n</text>
+	<text>\n</text>
+	<text>\n</text>
+	<text>\n</text>
+	</view>
+
+	<view class="input-view">
+	<form bindsubmit="onSubmit">
+		<input  name="money" class="input1" type="number" placeholder="请输入金额(单位:元)"></input>
+		<button class="btn1" type="primary" form-type="submit">确认</button>
+	</form>
+	</view>
+
+</view>
+<van-dialog id="van-dialog"/>

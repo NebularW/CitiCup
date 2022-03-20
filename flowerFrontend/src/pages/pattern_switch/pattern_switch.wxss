@@ -1,0 +1,13 @@
+/* pages/pattern_switch/pattern_switch.wxss */
+page {
+  background-color: #e4e4e4;
+}
+.add_btn{
+  width: 100%;
+  position: fixed;
+}
+.btn{
+  width:100%;
+  background: #ffffff;
+  color: rgb(12, 12, 12);
+}
