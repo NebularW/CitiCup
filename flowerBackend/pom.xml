@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.flower</groupId>
-    <artifactId>flower_backend</artifactId>
+    <artifactId>flowerBackend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>flower_backend</name>
-    <description>flower_backend</description>
+    <name>flowerBackend</name>
+    <description>flowerBackend</description>
     <properties>
         <java.version>8</java.version>
     </properties>
